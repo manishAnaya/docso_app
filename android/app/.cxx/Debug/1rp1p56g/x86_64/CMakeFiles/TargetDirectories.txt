@@ -1,0 +1,2 @@
+C:/Users/manis/OneDrive/Desktop/docso_app/android/app/.cxx/Debug/1rp1p56g/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/manis/OneDrive/Desktop/docso_app/android/app/.cxx/Debug/1rp1p56g/x86_64/CMakeFiles/rebuild_cache.dir
