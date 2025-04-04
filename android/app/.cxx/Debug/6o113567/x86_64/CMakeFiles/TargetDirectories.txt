@@ -1,0 +1,2 @@
+C:/Users/ManishAgrahari/Desktop/docso_app/docso_app/android/app/.cxx/Debug/6o113567/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/ManishAgrahari/Desktop/docso_app/docso_app/android/app/.cxx/Debug/6o113567/x86_64/CMakeFiles/rebuild_cache.dir
