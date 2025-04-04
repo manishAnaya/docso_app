@@ -2,7 +2,7 @@ import 'package:docso_app/core/models/nav_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../core/providers/bottom_nav_provider.dart';
-import 'home/home_screen.dart';
+import 'home/home_page.dart';
 import 'profile/profile_view/user_profile.dart';
 
 class AppBottomNavigation extends StatelessWidget {
@@ -16,7 +16,7 @@ class AppBottomNavigation extends StatelessWidget {
         builder: (_, index, __) => IndexedStack(
           index: index,
           children: const [
-            HomeScreen(),
+            HomePage(),
             Text('Hospital'),
             Text('Pharmacies'),
             Text('Lab'),

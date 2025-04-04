@@ -4,7 +4,7 @@ import '../../modules/auth/intro/intro_screen.dart';
 import '../../modules/auth/login/auth_screen.dart';
 import '../../modules/auth/login/otp_screen.dart';
 import '../../modules/src/app_bottom_navigation.dart';
-import '../../modules/src/home/home_screen.dart';
+import '../../modules/src/home/home_page.dart';
 import '../../modules/src/profile/manage_address/manage_address.dart';
 import '../../modules/src/profile/profile_view/user_profile.dart';
 
@@ -22,7 +22,7 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.home,
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => const HomePage(),
     ),
     GoRoute(
       path: AppRoutes.otp,
