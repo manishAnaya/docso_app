@@ -1,17 +1,18 @@
 import 'package:docso_app/constants/app_images.dart';
 import 'package:docso_app/core/utils/app_extensions.dart';
-import 'components/family_care_banner.dart';
-import 'components/footer.dart';
-import 'components/health_banner.dart';
-import 'components/pharmacy_section.dart';
+import 'package:docso_app/modules/src/book%20appointment/your_booking_section.dart';
+import 'components/banners/family_care_banner.dart';
+import 'components/banners/footer.dart';
+import 'components/banners/health_banner.dart';
+import '../medicine/pharmacy_section.dart';
 import 'package:flutter/material.dart';
 import '../../../constants/app_colors.dart';
-import 'components/banner_section.dart';
-import 'components/hospital_section.dart';
+import 'components/banners/banner_section.dart';
+import '../hospital/hospital_section.dart';
 import 'components/quick_service_grid.dart';
 import 'components/search_field.dart';
 import 'components/section_header.dart';
-import 'components/specialities_section.dart';
+import '../book appointment/specialities_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -55,8 +56,10 @@ class HomePage extends StatelessWidget {
               title: 'Top Hospital',
               onTap: () {},
             ),
+
             HospitalSection(),
-            // Banner
+            //
+            8.h,
             BannerSection(),
             // Top Pharmacies Section
             SectionHeader(
@@ -66,6 +69,12 @@ class HomePage extends StatelessWidget {
             PharmacySection(),
             // Health ID Banner
             HealthBanner(),
+            // Your Bookings
+            SectionHeader(
+              title: 'Your Bookings',
+              onTap: () {},
+            ),
+            YourBookingSection(),
             // Family Care Banner
             FamilyCareBanner(),
             // Footer

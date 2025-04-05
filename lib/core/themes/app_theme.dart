@@ -21,7 +21,7 @@ class AppTheme {
     appBarTheme: AppBarThemeData.light,
     colorScheme: ColorSchemeData.light,
     filledButtonTheme: FilledButtonThemeMode.light,
-    scaffoldBackgroundColor: AppColors.offWhite,
+    scaffoldBackgroundColor: AppColors.white,
     checkboxTheme: CheckBoxThemeMode.checkboxTheme,
     inputDecorationTheme: InputDecorationThemeMode.light,
     iconButtonTheme: IconButtonThemeMode.light,

@@ -1,4 +1,3 @@
-import 'package:docso_app/constants/app_colors.dart';
 import 'package:docso_app/constants/app_images.dart';
 import 'package:docso_app/constants/app_sizes.dart';
 import 'package:docso_app/constants/app_style.dart';
@@ -31,10 +30,7 @@ class QuickServiceGrid extends StatelessWidget {
 
   Widget buildQuickServiceCard(String title, String image) {
     return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppSizes.defaultRadius),
-        border: Border.all(color: AppColors.grey),
-      ),
+      decoration: AppStyle.cardDecoation,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

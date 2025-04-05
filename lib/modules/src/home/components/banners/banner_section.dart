@@ -1,6 +1,7 @@
 import 'package:docso_app/constants/app_images.dart';
 import 'package:docso_app/constants/app_style.dart';
 import 'package:docso_app/core/utils/app_extensions.dart';
+import 'package:docso_app/modules/common/small_button.dart';
 import 'package:flutter/material.dart';
 
 class BannerSection extends StatelessWidget {
@@ -13,10 +14,7 @@ class BannerSection extends StatelessWidget {
       padding: AppStyle.mediumPadding,
       child: Container(
         padding: AppStyle.mediumPadding,
-        decoration: BoxDecoration(
-          color: Color(0xFFC7E3FF),
-          borderRadius: BorderRadius.circular(12),
-        ),
+        decoration: AppStyle.bannerDecoation,
         child: Row(
           children: [
             Image.asset(
@@ -39,20 +37,7 @@ class BannerSection extends StatelessWidget {
                     ),
                   ),
                   8.h,
-                  SizedBox(
-                    width: 120,
-                    height: 30,
-                    child: FilledButton(
-                      style: FilledButton.styleFrom(
-                        backgroundColor: Colors.blue,
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        'Learn more',
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                  ),
+                  SmallButton(onPressed: () {}, label: 'Learn More'),
                 ],
               ),
             ),

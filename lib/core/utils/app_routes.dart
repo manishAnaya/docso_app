@@ -1,4 +1,5 @@
 import 'package:docso_app/core/services/navigation_service.dart';
+import 'package:docso_app/modules/src/book%20appointment/doctor_details.dart';
 import 'package:go_router/go_router.dart';
 import '../../modules/auth/intro/intro_screen.dart';
 import '../../modules/auth/login/auth_screen.dart';
@@ -37,6 +38,10 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const UserProfile(),
     ),
     GoRoute(
+      path: AppRoutes.docDetail,
+      builder: (context, state) => const DoctorDetailScreen(),
+    ),
+    GoRoute(
       path: AppRoutes.manageAddress,
       builder: (context, state) => const ManageAddress(),
     ),
@@ -50,5 +55,6 @@ class AppRoutes {
   static const String otp = '/otp';
   static const String appNav = '/appNav';
   static const String profile = '/profile';
+  static const String docDetail = '/docDetail';
   static const String manageAddress = '/manageAddress';
 }

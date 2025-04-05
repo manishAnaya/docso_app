@@ -1,45 +1,23 @@
 import 'package:docso_app/constants/app_colors.dart';
-import 'package:docso_app/constants/app_sizes.dart';
 import 'package:docso_app/constants/app_style.dart';
 import 'package:flutter/material.dart';
 
-class PharmacySection extends StatelessWidget {
-  const PharmacySection({super.key});
+class PharmacyCard extends StatelessWidget {
+  final String name, location, rating, days, hours;
+  const PharmacyCard({
+    super.key,
+    required this.name,
+    required this.location,
+    required this.rating,
+    required this.days,
+    required this.hours,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: AppStyle.horizontalPadding,
-      child: Column(
-        children: [
-          buildPharmacyCard(
-            'Medicare Pharmacy',
-            'Phase 1, Koramangala, City Mall',
-            '4.8',
-            'MON - SAT',
-            '09:00AM - 09:30PM',
-          ),
-          const SizedBox(height: 16),
-          buildPharmacyCard(
-            'Life Pharmacy',
-            'Phase 2, Koramangala',
-            '4.5',
-            'MON - SAT',
-            '09:00AM - 09:30PM',
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget buildPharmacyCard(
-      String name, String location, String rating, String days, String hours) {
     return Container(
       padding: AppStyle.mediumPadding,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppSizes.defaultRadius),
-        border: Border.all(color: AppColors.grey),
-      ),
+      decoration: AppStyle.cardDecoation,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

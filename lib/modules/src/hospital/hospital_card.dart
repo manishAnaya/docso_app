@@ -1,46 +1,26 @@
+import 'package:docso_app/constants/app_colors.dart';
 import 'package:docso_app/constants/app_style.dart';
 import 'package:docso_app/core/utils/app_extensions.dart';
+import 'package:docso_app/modules/common/small_button.dart';
 import 'package:flutter/material.dart';
-import '../../../../constants/app_colors.dart';
 
-class HospitalSection extends StatelessWidget {
-  const HospitalSection({super.key});
+class HospitalCard extends StatelessWidget {
+  final String name, type, rating, imagePath, location;
+  const HospitalCard({
+    super.key,
+    required this.name,
+    required this.type,
+    required this.rating,
+    required this.imagePath,
+    required this.location,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      padding: AppStyle.mediumPadding,
-      child: Row(
-        children: [
-          buildHospitalCard(
-            'Nationwide Children Hospital',
-            'Multi-specialty Hospital',
-            '4.8',
-            'assets/hospital1.jpg',
-            'JP Nagar',
-          ),
-          buildHospitalCard(
-            'Apollo Hospital',
-            'Multi-specialty Hospital',
-            '4.7',
-            'assets/hospital2.jpg',
-            'MG Road',
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget buildHospitalCard(String name, String type, String rating,
-      String imagePath, String location) {
     return Container(
       width: 250,
       margin: const EdgeInsets.only(right: 16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.grey),
-      ),
+      decoration: AppStyle.cardDecoation,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -91,22 +71,11 @@ class HospitalSection extends StatelessWidget {
                         fontSize: 14,
                       ),
                     ),
+                    Spacer(),
+                    SmallButton(onPressed: () {}, label: 'View'),
                   ],
                 ),
-                16.h,
-                Align(
-                  alignment: Alignment.center,
-                  child: SizedBox(
-                    height: 30,
-                    child: FilledButton(
-                      onPressed: () {},
-                      child: Text(
-                        'View',
-                        style: TextStyle(fontSize: 12),
-                      ),
-                    ),
-                  ),
-                ),
+                8.h,
               ],
             ),
           ),

@@ -1,5 +1,7 @@
 import 'package:docso_app/constants/app_colors.dart';
+import 'package:docso_app/constants/app_style.dart';
 import 'package:docso_app/core/utils/app_extensions.dart';
+import 'package:docso_app/modules/common/small_button.dart';
 import 'package:flutter/material.dart';
 
 class HealthBanner extends StatelessWidget {
@@ -8,13 +10,10 @@ class HealthBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: AppStyle.mediumPadding,
       child: Container(
-        padding: const EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          color: AppColors.secondaryLighter,
-          borderRadius: BorderRadius.circular(12),
-        ),
+        padding: AppStyle.mediumPadding,
+        decoration: AppStyle.bannerDecoation,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,16 +33,7 @@ class HealthBanner extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  height: 30,
-                  child: FilledButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Join Now',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                  ),
-                ),
+                SmallButton(onPressed: () {}, label: 'Join Now'),
                 Image.network(
                   'https://www.indianpharmapost.com/public/thumbs/news/2022/03/11809/NHA1.png',
                   height: 50,

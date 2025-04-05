@@ -1,3 +1,4 @@
+import 'package:docso_app/constants/app_colors.dart';
 import 'package:docso_app/core/models/nav_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -35,7 +36,7 @@ class AppBottomNavigation extends StatelessWidget {
   Widget buildBottomNavBar(int currentIndex, BuildContext context) {
     final themeData = Theme.of(context).bottomNavigationBarTheme;
     final selectedColor = themeData.selectedItemColor;
-    final unselectedColor = themeData.unselectedItemColor;
+    final unselectedColor = AppColors.darkGrey;
     final navItems = [
       NavItem(id: 1, label: 'Home', icon: Icons.home, route: ''),
       NavItem(id: 2, label: 'Hospital', icon: Icons.local_hospital, route: ''),
@@ -46,6 +47,7 @@ class AppBottomNavigation extends StatelessWidget {
     return BottomNavigationBar(
       currentIndex: currentIndex,
       type: BottomNavigationBarType.fixed,
+      unselectedItemColor: AppColors.darkGrey,
       onTap: context.read<BottomNavProvider>().changeIndex,
       items: navItems
           .map((navItem) => BottomNavigationBarItem(

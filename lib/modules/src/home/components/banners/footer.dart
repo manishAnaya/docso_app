@@ -24,7 +24,12 @@ class FooterSection extends StatelessWidget {
             ),
           ),
           16.h,
-          Image.asset(AppAssets.building)
+          Image.asset(
+            AppAssets.building,
+            height: 175,
+            width: double.maxFinite,
+            fit: BoxFit.fill,
+          )
         ],
       ),
     );

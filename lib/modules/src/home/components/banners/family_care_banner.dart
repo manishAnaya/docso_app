@@ -1,6 +1,4 @@
-import 'package:docso_app/constants/app_colors.dart';
 import 'package:docso_app/constants/app_images.dart';
-import 'package:docso_app/constants/app_sizes.dart';
 import 'package:docso_app/constants/app_style.dart';
 import 'package:flutter/material.dart';
 
@@ -13,10 +11,7 @@ class FamilyCareBanner extends StatelessWidget {
       padding: AppStyle.mediumPadding,
       child: Container(
         padding: AppStyle.mediumPadding,
-        decoration: BoxDecoration(
-          color: AppColors.white,
-          borderRadius: BorderRadius.circular(AppSizes.defaultRadius),
-        ),
+        decoration: AppStyle.bannerDecoation,
         child: Row(
           children: [
             const Expanded(

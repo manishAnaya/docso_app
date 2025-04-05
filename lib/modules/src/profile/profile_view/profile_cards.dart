@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 import '../../../../constants/app_sizes.dart';
 import '../../../../core/models/profile_tile.dart';
 import '../../../../core/providers/bottom_nav_provider.dart';
-import '../../../../core/providers/theme_provider.dart';
 import '../../../common/custom_bottom_sheet.dart';
 
 class ProfileCards extends StatelessWidget {
@@ -15,24 +14,34 @@ class ProfileCards extends StatelessWidget {
 
   List<ProfileTile> profileTiles(BuildContext context) => [
         ProfileTile(
-          label: 'Your Orders',
-          icon: Icons.shopping_bag_outlined,
+          label: 'Your Profile',
+          icon: Icons.person,
           onTap: () => context.push('/orders'),
         ),
         ProfileTile(
-          label: 'Your Coupons',
-          icon: Icons.discount,
-          onTap: () => context.push('/coupons'),
+          label: 'Your Orders',
+          icon: Icons.shopping_bag,
+          onTap: () => context.push('/orders'),
+        ),
+        ProfileTile(
+          label: 'Your Prescription',
+          icon: Icons.document_scanner,
+          onTap: () => context.push('/pres'),
+        ),
+        ProfileTile(
+          label: 'Your Lab Test',
+          icon: Icons.science,
+          onTap: () => context.push('/pres'),
+        ),
+        ProfileTile(
+          label: 'Doctor Consultation',
+          icon: Icons.local_hospital,
+          onTap: () => context.push('/pres'),
         ),
         ProfileTile(
           label: 'Manage Address',
           icon: Icons.location_on_outlined,
           onTap: () => context.push('/manageAddress'),
-        ),
-        ProfileTile(
-          label: 'Change Theme',
-          icon: Icons.filter,
-          onTap: context.read<ThemeProvider>().toggleTheme,
         ),
         ProfileTile(
           label: 'Logout',
@@ -59,13 +68,14 @@ class ProfileCards extends StatelessWidget {
       TextTheme textTheme, String label, IconData icon, void Function() onTap) {
     return GestureDetector(
       onTap: onTap,
-      child: Card(
+      child: Container(
+        decoration: AppStyle.cardDecoation,
         margin: AppStyle.listPadding,
         child: Padding(
-          padding: AppStyle.mediumPadding,
+          padding: AppStyle.lowPadding,
           child: Row(
             children: [
-              Icon(icon, size: 25, color: AppColors.primary),
+              Icon(icon, size: 20, color: AppColors.primary),
               AppSizes.spacingNBtw.w,
               Text(label, style: textTheme.titleMedium),
               const Spacer(),
